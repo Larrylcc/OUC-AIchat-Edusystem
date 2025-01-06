@@ -3,7 +3,9 @@
     "page/component/index",
     "page/API/index",
     "page/cloud/index",
-    "page/extend/index"
+    "page/extend/index",
+    "page/ai-chat/chat",
+    "page/personalCenter/personalCenter"
   ],
   "subpackages": [
     {
@@ -42,8 +44,8 @@
         "pages/open/ad/ad",
         "pages/open/open-data/open-data",
         "pages/open/web-view/web-view",
-        "pages/obstacle-free/aria-component/aria-component",
-        "pages/ai-chat/chat"
+        "pages/obstacle-free/aria-component/aria-component"
+
       ]
     },
     {
@@ -182,6 +184,7 @@
         "pages/adapt/freelayout/freelayout",
         "pages/adapt/layeredpresentation/layeredpresentation",
         "pages/adapt/horizontalexpansion/horizontalexpansion"
+        
       ]
     }
   ],
@@ -230,8 +233,8 @@
         "text": "组件"
       },
       {
-        "pagePath": "pages/ai-chat/chat",
-        "iconPath": "image/icon_AI_chat.png",
+        "pagePath": "page/ai-chat/chat",
+        "iconPath": "image/icon_cloud.png",
         "selectedIconPath": "image/icon_selected_AI_chat.png",
         "text": "AI 对话"
       },
@@ -241,17 +244,18 @@
         "selectedIconPath": "@selectedIconPathComponent",
         "text": "扩展能力"
       },
-      {
-        "pagePath": "page/API/index",
-        "iconPath": "@iconPathAPI",
-        "selectedIconPath": "@selectedIconPathAPI",
-        "text": "接口"
-      },
+      
       {
         "pagePath": "page/cloud/index",
         "iconPath": "@iconPathCloud",
         "selectedIconPath": "@selectedIconPathCloud",
         "text": "云开发"
+      },
+      {
+        "pagePath": "page/personalCenter/personalCenter",
+        "iconPath": "image/icon_personal.png",  
+        "selectedIconPath": "image/icon_personal_selected.png", 
+        "text": "个人中心"
       }
     ]
   },
