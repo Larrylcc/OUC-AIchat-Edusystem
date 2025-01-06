@@ -1,4 +1,6 @@
-//管理页面逻辑，负责调用DeepSeek API并更新页面数据
+// 引入 config.js 模块，注意相对路径
+const config = require('../../config.js'); 
+
 Page({
   data: {
     messages: [], // 保存对话记录
@@ -32,13 +34,13 @@ Page({
     });
 
     try {
-      // 调用DeepSeek API
+      // 调用 DeepSeek API
       wx.request({
-        url: 'https://api.deepseek.com/chat/completions',
+        url: config.API_URL, // 使用配置文件中的 API 地址
         method: 'POST',
         header: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer your_api_key',
+          'Authorization': `Bearer ${config.API_KEY}`, // 使用配置文件中的 API Key
         },
         data: {
           model: 'deepseek-chat',
@@ -78,4 +80,3 @@ Page({
     }
   },
 });
-
