@@ -4,7 +4,8 @@
     "page/API/index",
     "page/cloud/index",
     "page/extend/index",
-    "page/ai-chat/chat"
+    "page/ai-chat/chat",
+    "page/personalCenter/personalCenter"
   ],
   "subpackages": [
     {
@@ -183,6 +184,7 @@
         "pages/adapt/freelayout/freelayout",
         "pages/adapt/layeredpresentation/layeredpresentation",
         "pages/adapt/horizontalexpansion/horizontalexpansion"
+        
       ]
     }
   ],
@@ -242,17 +244,18 @@
         "selectedIconPath": "@selectedIconPathComponent",
         "text": "扩展能力"
       },
-      {
-        "pagePath": "page/API/index",
-        "iconPath": "@iconPathAPI",
-        "selectedIconPath": "@selectedIconPathAPI",
-        "text": "接口"
-      },
+      
       {
         "pagePath": "page/cloud/index",
         "iconPath": "@iconPathCloud",
         "selectedIconPath": "@selectedIconPathCloud",
         "text": "云开发"
+      },
+      {
+        "pagePath": "page/personalCenter/personalCenter",
+        "iconPath": "image/icon_personal.png",  
+        "selectedIconPath": "image/icon_personal_selected.png", 
+        "text": "个人中心"
       }
     ]
   },

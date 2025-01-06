@@ -1,0 +1,11 @@
+<view class="container">
+  <form bindsubmit="submitEvaluation">
+    <view class="input-group">
+      <textarea name="content" placeholder="请输入评价内容" />
+    </view>
+    <view class="input-group">
+      <slider name="score" show-value min="0" max="5" />
+    </view>
+    <button formType="submit">提交评价</button>
+  </form>
+</view>
