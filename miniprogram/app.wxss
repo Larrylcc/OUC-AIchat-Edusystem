@@ -1,7 +1,7 @@
 @import "./page/common/lib/weui.wxss";
 
 
-/* reset */
+/* nihaohao */
 page {
   background-color: var(--weui-BG-1);
   height: 100%;
