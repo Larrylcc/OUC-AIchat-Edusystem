@@ -12,7 +12,7 @@ Page({
     roleBackgrounds:{
       '通用型': '../../image/background_AIchat_basic.png',
       '古风小生': '../../image/background_ancient_scholar.png',
-      '英语老师': '../../image/background_AIchat_basic.png'
+      '英语老师': '../../image/background_english_teacher.png'
     }
   },
 
