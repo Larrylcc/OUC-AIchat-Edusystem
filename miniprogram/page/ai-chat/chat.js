@@ -5,7 +5,7 @@ Page({
   data: {
     messages: [], // 保存对话记录
     inputText: '', // 用户输入的文本
-    options:['通用型','role2','role3'],
+    options:['通用型','古风小生','英语老师'],
     selectedOption:'选择角色',
     isThinking: false,
   },
@@ -14,13 +14,14 @@ Page({
     const i = e.detail.value;
     const opt=this.data.options[i];
     this.setData({ selectedOption: opt });
-    if (i == 0) {
+    //console.log('Selected Option:',opt)
+    /*if (i == 0) {
       wx.navigateTo({ url: '/page/ai-chat' });
     } else if (i == 1) {
       wx.navigateTo({ url: '/pages/englishTeacher' });
     } else {
       wx.navigateTo({ url: '/pageC/pageC' });
-    }
+    }*/
   },
 
   onLoad() {
@@ -34,7 +35,7 @@ Page({
   },
 
   async sendMessage() {
-    const { inputText, messages } = this.data;
+    const { inputText, messages, selectedOption } = this.data;
     if (!inputText.trim()) {
       wx.showToast({
         title: '请输入内容',
@@ -51,6 +52,14 @@ Page({
     });
 
     try {
+      let systemPrompt = 'You are a helpful assistant.'; // 默认提示词
+      if (selectedOption === '英语老师') {
+        systemPrompt = 'You are an English teacher. You must respond in English only. If the user speaks Chinese, translate it into English and respond in English. Do not use any other language under any circumstances.'; // 英语老师角色提示词
+      }
+      if (selectedOption === '古风小生') {
+        systemPrompt = '汝乃一古风小生，精通诗词歌赋，熟读四书五经。汝之言行，皆须以文言文出之，不得用白话。汝须以古人之礼待人，言辞优雅，引经据典，仿若古之文人雅士。若有人以白话问之，汝须将其言转为文言，再以文言答之。切记，汝之回答，务必合乎古风，不得有违。'; // 古风小生角色提示词
+      }
+      console.log('System Prompt:', systemPrompt);
       // 调用 DeepSeek API
       wx.request({
         url: config.API_URL, // 使用配置文件中的 API 地址
@@ -62,12 +71,14 @@ Page({
         data: {
           model: 'deepseek-chat',
           messages: [
-            { role: 'system', content: 'You are a helpful assistant.' },
+            { role: 'system', content: systemPrompt },
             { role: 'user', content: inputText },
           ],
         },
         success: (res) => {
           if (res.statusCode === 200 && res.data.choices && res.data.choices[0]) {
+            console.log('API Response:', res.data); // 打印完整的 API 响应
+            console.log('API response:', res.data);
             const aiReply = res.data.choices[0].message.content;
             const richText = markdownToRichText(aiReply);
             this.setData({
