@@ -1,0 +1,65 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+<view class="container page" data-weui-theme="{{theme}}">
+  <template is="head" data="{{title: 'Course Schedule'}}"/>
+  
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>课表安排</text>
+      </view>
+
+      <!-- 星期一到星期五的布局 -->
+      <view class="page-section-spacing">
+        <view class="flex-wrp" style="flex-direction: row;">
+          <!-- 星期一 -->
+          <view class="flex-item">
+            <view class="day-title">星期一</view>
+            <view class="course-item">8:00 - 10:00</view>
+            <view class="course-item">数学 - 教室101</view>
+            <view class="course-item">10:00 - 12:00</view>
+            <view class="course-item">英语 - 教室102</view>
+          </view>
+          
+          <!-- 星期二 -->
+          <view class="flex-item">
+            <view class="day-title">星期二</view>
+            <view class="course-item">9:00 - 11:00</view>
+            <view class="course-item">物理 - 教室201</view>
+            <view class="course-item">13:00 - 15:00</view>
+            <view class="course-item">化学 - 教室202</view>
+          </view>
+          
+          <!-- 星期三 -->
+          <view class="flex-item">
+            <view class="day-title">星期三</view>
+            <view class="course-item">8:00 - 10:00</view>
+            <view class="course-item">编程 - 教室103</view>
+            <view class="course-item">10:00 - 12:00</view>
+            <view class="course-item">体育 - 操场</view>
+          </view>
+
+          <!-- 星期四 -->
+          <view class="flex-item">
+            <view class="day-title">星期四</view>
+            <view class="course-item">9:00 - 11:00</view>
+            <view class="course-item">生物 - 教室301</view>
+            <view class="course-item">13:00 - 15:00</view>
+            <view class="course-item">历史 - 教室302</view>
+          </view>
+
+          <!-- 星期五 -->
+          <view class="flex-item">
+            <view class="day-title">星期五</view>
+            <view class="course-item">8:00 - 10:00</view>
+            <view class="course-item">化学 - 教室202</view>
+            <view class="course-item">10:00 - 12:00</view>
+            <view class="course-item">数学 - 教室101</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <template is="foot" />
+</view>

@@ -1,11 +1,74 @@
-button{
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.button-sp-area{
-  margin: 0 auto;
-  width: 60%;
-}
-.mini-btn{
-  margin-right: 5px;
-}
+/* 整体容器 */
+.container {
+    padding: 20px;
+    background-color: #f8f8f8;  /* 背景颜色 */
+    height: 100vh;  /* 使整个屏幕高度适应 */
+  }
+  
+  /* 标题区域 */
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a90e2;  /* 标题颜色 */
+  }
+  
+  /* 课程条目样式 */
+  .course-item {
+    margin-bottom: 20px;
+  }
+  
+  /* 每条课程卡片 */
+  .course-box {
+    padding: 20px;
+    border: 1px solid #ddd;  /* 边框颜色 */
+    border-radius: 8px;  /* 圆角 */
+    background-color: white;  /* 卡片背景 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* 阴影效果 */
+  }
+  
+  /* 课程名称 */
+  .course-name {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* 学分 */
+  .course-xufen {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* 老师名称 */
+  .course-teacher {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* 选课按钮 */
+  .choose-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .choose-btn:hover {
+    background-color: #45a049;  /* 悬停时按钮颜色变化 */
+  }
+  
+  .choose-btn:disabled {
+    background-color: #ccc;  /* 已选课时按钮禁用 */
+  }
+  

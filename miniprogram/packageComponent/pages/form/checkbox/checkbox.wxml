@@ -1,34 +1,36 @@
 <import src="../../../common/head.wxml" />
 <import src="../../../common/foot.wxml" />
 
-<view class="container page" data-weui-theme="{{theme}}">
-  <template is="head" data="{{title: 'checkbox'}}"/>
+<view class="container">
+  <!-- 标题 -->
+  <view class="header">
+    <text class="title">课程评价系统</text>
+  </view>
 
-  <view class="page-body">
-    <view class="page-section page-section-gap">
-      <view class="page-section-title">默认样式</view>
-      <label class="checkbox">
-        <checkbox value="cb" checked="true"/>选中
-      </label>
-      <label class="checkbox">
-        <checkbox value="cb" />未选中
-      </label>
-    </view>
-
-    <view class="page-section">
-      <view class="page-section-title">推荐展示样式</view>
-      <view class="weui-cells weui-cells_after-title">
-        <checkbox-group bindchange="checkboxChange">
-          <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
-            <view class="weui-cell__hd">
-              <checkbox value="{{item.value}}" checked="{{item.checked}}"/>
-            </view>
-            <view class="weui-cell__bd">{{item.name}}</view>
-          </label>
-        </checkbox-group>
+  <!-- 课程列表 -->
+  <view class="course-list">
+    <view class="course" wx:for="{{selectedCourses}}" wx:key="id">
+      <view class="course-info">
+        <text class="course-name">{{item.name}}</text>
+        <text class="course-teacher">{{item.teacher}}</text>
+      </view>
+      <view class="rating">
+        <text>评分：</text>
+        <view class="stars">
+          <view class="star" wx:for="{{[1, 2, 3, 4, 5]}}" wx:key="index" bindtap="onRateCourse" data-courseid="{{item.id}}" data-rating="{{index + 1}}">
+            <text class="{{item.rating >= index + 1 ? 'star-selected' : 'star-unselected'}}">★</text>
+          </view>
+        </view>
+      </view>
+      <textarea class="comment-input" placeholder="写评论..." bindinput="onCommentInput" data-courseid="{{item.id}}"></textarea>
+      <button class="submit-button" bindtap="onSubmitReview" data-courseid="{{item.id}}">提交评价</button>
+      <view class="course-reviews">
+        <text>历史评价：</text>
+        <view wx:for="{{item.reviews}}" wx:key="reviewId" class="review-item">
+          <text>{{item.username}}：</text>
+          <text>{{item.comment}}</text>
+        </view>
       </view>
     </view>
   </view>
-
-  <template is="foot" />
 </view>

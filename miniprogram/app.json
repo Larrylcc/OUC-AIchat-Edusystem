@@ -228,7 +228,7 @@
         "pagePath": "page/component/index",
         "iconPath": "@iconPathComponent",
         "selectedIconPath": "@selectedIconPathComponent",
-        "text": "组件"
+        "text": "首页"
       },
       {
         "pagePath": "page/ai-chat/chat",

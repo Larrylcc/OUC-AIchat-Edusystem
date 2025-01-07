@@ -2,51 +2,12 @@ const config = require('./config')
 const themeListeners = []
 global.isDemo = true
 App({
-  
-  onLaunch(opts, data) {
-    // const that = this;
-    // const canIUseSetBackgroundFetchToken = wx.canIUse('setBackgroundFetchToken')
-    // if (canIUseSetBackgroundFetchToken) {
-    //   wx.setBackgroundFetchToken({
-    //     token: 'getBackgroundFetchToken',
-    //   })
-    // }
-    // if (wx.getBackgroundFetchData) {
-    //   wx.getBackgroundFetchData({
-    //     fetchType: 'pre',
-    //     success(res) {
-    //       that.globalData.backgroundFetchData  = res;
-    //       console.log('读取预拉取数据成功')
-    //     },
-    //     fail() {
-    //       console.log('读取预拉取数据失败')
-    //       wx.showToast({
-    //         title: '无缓存数据',
-    //         icon: 'none'
-    //       })
-    //     },
-    //     complete() {
-    //       console.log('结束读取')
-    //     }
-    //   })
-    // }
-    console.log('App Launch', opts)
-    if (data && data.path) {
-      wx.navigateTo({
-        url: data.path,
-      })
-    }
-    if (!wx.cloud) {
-      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
-    } else {
-      wx.cloud.init({
-        env: config.envId,
-        traceUser: true,
-      })
-    }
-  },
-
-  
+    onLaunch() {
+        wx.cloud.init({
+          env: 'edusystem-test-3g4jmh2ze18ac322', // 替换为你自己的云环境ID
+          traceUser: true
+        });
+    },
   onShow(opts) {
     console.log('App Show', opts)
     // console.log(wx.getSystemInfoSync())
@@ -119,4 +80,5 @@ App({
       return res.result.openid
     })
   }
+  
 })

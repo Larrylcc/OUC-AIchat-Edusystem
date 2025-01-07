@@ -1,22 +1,20 @@
-<import src="../../../common/head.wxml" />
-<import src="../../../common/foot.wxml" />
-
 <view class="container page" data-weui-theme="{{theme}}">
-  <template is="head" data="{{title: 'navigator'}}"/>
+  <template is="head" data="{{title: 'image'}}"/>
 
   <view class="page-body">
-    <view class="btn-area">
-      <navigator url="navigate?title=navigate" hover-class="ohter-navigator">
-       <button type="default">跳转到新页面</button>
-      </navigator>
-      <navigator url="redirect?title=redirect" redirect hover-class="other-navigator-hover">
-        <button type="default">在当前页打开</button>
-      </navigator>
-      <navigator target="miniProgram" hover-class="other-navigator-hover" open-type="navigate" app-id="wx4f1b24bdc99fa23b" version="release">
-        <button type="default">打开小程序</button>
-      </navigator>
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">2024年夏季校历</view>
+      <view class="page-section-ctn">
+        <image class="image" src="../../../resources/pic/3.jpg"/>
+      </view>
+    </view>
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">2024年春季校历</view>
+      <view class="page-section-ctn">
+        <image class="image" src="../../../resources/pic/4.jpg"/>
+      </view>
     </view>
   </view>
 
-  <template is="foot" />
+  <template is="foot"/>
 </view>
