@@ -1,7 +1,6 @@
 <!--定义页面布局，设计对话界面-->
 <!-- filepath: /miniprogram/pages/ai-chat/ai-chat.wxml -->
 <view class="chat-container">
-  <image class="bg-image" src="../../image/background_AIchat_basic.png" mode="aspectFill"></image>
   <!-- 标题栏 -->
   <view class="header">
     <view class="header-avatar">D</view>

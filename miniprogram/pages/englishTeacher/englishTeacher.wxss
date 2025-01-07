@@ -6,18 +6,9 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position:relative;
+  background-color: #f0f4f7; /* 浅灰背景 */
 }
-.bg-image{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* 让图在底层 */
-}
+
 /* 标题栏 */
 .header {
   display: flex;
@@ -69,8 +60,6 @@
   flex: 1;
   overflow-y: auto;
   padding: 10px;
-  display:flex;
-  flex-direction: column;
 }
 
 /* 消息样式 */
@@ -84,11 +73,10 @@
   font-size:14px;
   line-height:1.6;
   box-shadow:0 2px 4px rgba(0,0,0,0.1);
-  width:fit-content;
 }
 
 .message.user {
-  align-self: auto;
+  align-self: flex-end;
   background-color: #007bff;
   color: white;
   text-align: left;
@@ -96,7 +84,7 @@
 }
 
 .message.ai {
-  align-self: auto;
+  align-self: flex-start;
   background-color: #f0f0f0;
   color: #333;
   text-align: left;

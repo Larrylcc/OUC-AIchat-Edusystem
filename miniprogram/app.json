@@ -44,8 +44,8 @@
         "pages/open/ad/ad",
         "pages/open/open-data/open-data",
         "pages/open/web-view/web-view",
-        "pages/obstacle-free/aria-component/aria-component"
-
+        "pages/obstacle-free/aria-component/aria-component",
+        "pages/englishTeacher/eng"
       ]
     },
     {
