@@ -8,12 +8,22 @@ Page({
     options:['通用型','古风小生','英语老师'],
     selectedOption:'选择角色',
     isThinking: false,
+    backgroundImage:'../../image/background_AIchat_basic.png',
+    roleBackgrounds:{
+      '通用型': '../../image/background_AIchat_basic.png',
+      '古风小生': '../../image/background_ancient_scholar.png',
+      '英语老师': '../../image/background_AIchat_basic.png'
+    }
   },
 
   handlePickerChange(e){
     const i = e.detail.value;
     const opt=this.data.options[i];
-    this.setData({ selectedOption: opt });
+    const backgroundImage = this.data.roleBackgrounds[opt];
+    this.setData({ 
+      selectedOption: opt,
+      backgroundImage: backgroundImage,
+    });
     //console.log('Selected Option:',opt)
     /*if (i == 0) {
       wx.navigateTo({ url: '/page/ai-chat' });
