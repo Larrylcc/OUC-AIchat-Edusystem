@@ -7,6 +7,7 @@ Page({
     inputText: '', // 用户输入的文本
     options:['通用型','role2','role3'],
     selectedOption:'选择角色',
+    isThinking: false,
   },
 
   handlePickerChange(e){
@@ -46,6 +47,7 @@ Page({
     this.setData({
       messages: [...messages, { sender: 'user', text: inputText }],
       inputText: '', // 清空输入框
+      isThinking: true,
     });
 
     try {
@@ -70,12 +72,16 @@ Page({
             const richText = markdownToRichText(aiReply);
             this.setData({
               messages: [...this.data.messages, { sender: 'ai', text: richText }],
+              isThinking: false,
             });
           } else {
             console.error('API 响应错误：', res.data);
             wx.showToast({
               title: 'API响应异常',
               icon: 'none',
+            });
+            this.setData({
+              isThinking: false,
             });
           }
         },
@@ -85,6 +91,9 @@ Page({
             icon: 'none',
           });
           console.error('API调用失败：', err);
+          this.setData({
+            isThinking: false,
+          })
         },
       });
     } catch (error) {
@@ -93,6 +102,9 @@ Page({
         icon: 'none',
       });
       console.error('调用错误：', error);
+      this.setData({
+        isThinking: false,
+      })
     }
   },
 });

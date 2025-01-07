@@ -24,6 +24,9 @@
         <text wx:else>{{item.text}}</text>
       </view>
     </block>
+    <view wx:if="{{isThinking}}" class="message ai">
+      <text>AI正在全力思考🤔</text>
+    </view>
   </view>
 
   <!-- 输入框 -->
