@@ -17,22 +17,16 @@
         "text": "首页"
       },
       {
-        "pagePath": "page/extend/index",
-        "iconPath": "image/icon_component_HL.png",
-        "selectedIconPath": "image/icon_component_dark.png",
-        "text": "扩展能力"
+        "pagePath": "page/ai-chat/chat",
+        "iconPath": "image/icon_cloud.png",
+        "selectedIconPath": "image/icon_selected_AI_chat.png",
+        "text": "AI 对话"
       },
       {
-        "pagePath": "page/API/index",
-        "iconPath": "image/icon_API_HL.png",
-        "selectedIconPath": "image/icon_API_dark.png",
-        "text": "接口"
-      },
-      {
-        "pagePath": "page/cloud/index",
-        "iconPath": "image/icon_cloud_HL.png",
-        "selectedIconPath": "image/icon_cloud_dark.png",
-        "text": "云开发"
+        "pagePath": "page/personalCenter/personalCenter",
+        "iconPath": "image/icon_personal.png",  
+        "selectedIconPath": "image/icon_personal_selected.png", 
+        "text": "个人中心"
       }
     ]
   }

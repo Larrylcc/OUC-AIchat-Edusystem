@@ -1,19 +1,32 @@
 <!--定义页面布局，设计对话界面-->
 <!-- filepath: /miniprogram/pages/ai-chat/ai-chat.wxml -->
 <view class="chat-container">
+  <image class="bg-image" src="{{backgroundImage}}" mode="aspectFill"></image>
   <!-- 标题栏 -->
   <view class="header">
     <view class="header-avatar">D</view>
     <text class="header-title">DeepSeek</text>
+    <picker mode="selector" range="{{options}}" bindchange="handlePickerChange">
+    <view class="picker-display">
+      {{selectedOption}}
+      <text class="picker-display-icon">▼</text>
+    </view>
+  </picker>
   </view>
 
   <!-- 消息列表 -->
   <view class="message-list">
     <block wx:for="{{messages}}" wx:key="index">
       <view class="{{item.sender === 'user' ? 'message user' : 'message ai'}}">
-        {{item.text}}
+        <!-- 如果是AI消息，使用rich-text渲染 -->
+        <rich-text wx:if="{{item.sender === 'ai'}}" nodes="{{item.text}}"></rich-text>
+        <!-- 用户消息保持原样 -->
+        <text wx:else>{{item.text}}</text>
       </view>
     </block>
+    <view wx:if="{{isThinking}}" class="message ai">
+      <text>AI正在全力思考🤔</text>
+    </view>
   </view>
 
   <!-- 输入框 -->
