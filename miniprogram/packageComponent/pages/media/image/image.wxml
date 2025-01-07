@@ -1,29 +1,16 @@
 <import src="../../../common/head.wxml"/>
 <import src="../../../common/foot.wxml"/>
 
-<view class="container page" data-weui-theme="{{theme}}">
-  <template is="head" data="{{title: 'image'}}"/>
-
-  <view class="page-body">
-    <view class="page-section page-section-gap">
-      <view class="page-section-title">Local Image</view>
-      <view class="page-section-ctn">
-        <image class="image" src="../../../resources/pic/1.jpg"/>
-      </view>
-    </view>
-    <view class="page-section page-section-gap">
-      <view class="page-section-title">Internet Image</view>
-      <view class="page-section-ctn">
-        <image class="image" src="https://res.wx.qq.com/op_res/gNITiJpSsxIqUDS1yDf91HzMi82cW3Ty5yfvLu_NIkWH3P0vsKDmtdAcpIWMfAJN"/>
-      </view>
-    </view>
-     <view class="page-section page-section-gap">
-      <view class="page-section-title">Webp Image</view>
-      <view class="page-section-ctn">
-        <image class="image" webp src="{{webpImageUrl}}" mode="aspectFit"/>
-      </view>
+<view class="container">
+  <view class="header">
+    <text class="title">成绩查看</text>
+  </view>
+  
+  <view wx:for="{{scores}}" wx:key="index" class="score-item">
+    <view class="score-box">
+      <text class="score-name">{{item.name}}</text>
+      <text class="score-xufen">{{item.xufen}}</text>
+      <text class="score-value">{{item.score}}</text>
     </view>
   </view>
-
-  <template is="foot"/>
 </view>

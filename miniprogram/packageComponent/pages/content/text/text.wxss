@@ -1,16 +1,32 @@
-button{
-  margin: 20px 0;
-}
-.text-box{
-  margin-bottom: 35px;
-  padding: 20px 0;
-  display: flex;
-  min-height: 150px;
-  background-color: #FFFFFF;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 15px;
-  color: #353535;
-  line-height: 2em;
-}
+/* 外层容器样式 */
+.notice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 每个通知之间的间距 */
+    padding: 10px;
+    background-color: #f9fafc; /* 背景色 */
+  }
+  
+  /* 每个通知框 */
+  .notice-box {
+    border: 1px solid #dcdfe6; /* 边框 */
+    border-radius: 8px; /* 圆角 */
+    padding: 12px;
+    background-color: #ffffff; /* 通知框背景色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+  }
+  
+  /* 通知内容样式 */
+  .notice-content {
+    font-size: 14px;
+    color: #333333; /* 文字颜色 */
+    line-height: 1.5;
+    word-break: break-word; /* 长文本换行 */
+  }
+  .notice-time {
+    font-size: 14px;
+    color: #333333; /* 文字颜色 */
+    line-height: 1.5;
+    word-break: break-word; /* 长文本换行 */
+  }
+  

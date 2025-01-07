@@ -1,0 +1,11 @@
+.day-title {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .course-item {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  

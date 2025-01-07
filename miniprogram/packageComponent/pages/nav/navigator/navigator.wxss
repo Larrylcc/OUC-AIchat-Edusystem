@@ -1,6 +1,108 @@
-.navigator-hover button{
-  background-color: #DEDEDE;
-}
-.other-navigator-hover button{
-  background-color: #DEDEDE;
-}
+/* 页面容器 */
+.container {
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  /* 月份标题 */
+  .month-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* 月份选择按钮 */
+  .month-picker {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .month-picker button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .month-picker button:hover {
+    background-color: #45a049;
+  }
+  
+  /* 星期几标题行 */
+  .weekdays {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* 每天的日期 */
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* 每一周 */
+  .week {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  /* 单个日期的样式 */
+  .day {
+    width: 13%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .day:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .day:empty {
+    background-color: transparent;
+  }
+  
+  /* 日期点击时的样式 */
+  .day.selected {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* 确保按钮、日期的布局 */
+  button, .day {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* 假期日期的样式 */
+  .holiday {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* 响应式布局，当屏幕宽度较小时调整 */
+  @media (max-width: 600px) {
+    .month-picker button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .day {
+      width: 14%;
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+  

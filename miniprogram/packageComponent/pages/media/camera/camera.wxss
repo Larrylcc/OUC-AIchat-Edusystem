@@ -1,39 +1,54 @@
-
-
-camera {
-  height: 250px;
-}
-
-.preview-tips {
-  margin: 10px 0;  
-}
-
-.photo, .video {
-  margin-top: 25px;
-  width: 100%;
-}
-
-.btn-area {
-  margin-top: 0;
-}
-
-.first-btn {
-  margin-top: 15px;
-}
-
-form {
-  margin-top: 15px;
-}
-
-.weui-cell__bd {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px 0;
-  min-height: 30px;
-}
-
-.info-container {
-  margin: 12px;
-  text-align: center;
-}
+/* 整体容器 */
+.container {
+    padding: 20px;
+    background-color: #f8f8f8;  /* 背景颜色 */
+    height: 100vh;  /* 使整个屏幕高度适应 */
+  }
+  
+  /* 标题区域 */
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a90e2;  /* 标题颜色 */
+  }
+  
+  /* 成绩条目样式 */
+  .score-item {
+    margin-bottom: 15px;
+  }
+  
+  /* 每条成绩卡片 */
+  .score-box {
+    padding: 15px;
+    border: 1px solid #ddd;  /* 边框颜色 */
+    border-radius: 8px;  /* 圆角 */
+    background-color: white;  /* 卡片背景 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* 阴影效果 */
+  }
+  
+  /* 成绩名称 */
+  .score-name {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* 学分 */
+  .score-xufen {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* 成绩值 */
+  .score-value {
+    font-size: 16px;
+    color: #e94e77;  /* 成绩的红色 */
+    margin-top: 5px;
+  }
+  
