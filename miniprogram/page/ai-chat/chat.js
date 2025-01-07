@@ -1,6 +1,6 @@
 // 引入 config.js 模块，注意相对路径
 const config = require('../../config.js'); 
-
+const markdownToRichText = require('../../util/markdownToRichText')
 Page({
   data: {
     messages: [], // 保存对话记录
@@ -67,8 +67,9 @@ Page({
         success: (res) => {
           if (res.statusCode === 200 && res.data.choices && res.data.choices[0]) {
             const aiReply = res.data.choices[0].message.content;
+            const richText = markdownToRichText(aiReply);
             this.setData({
-              messages: [...this.data.messages, { sender: 'ai', text: aiReply }],
+              messages: [...this.data.messages, { sender: 'ai', text: richText }],
             });
           } else {
             console.error('API 响应错误：', res.data);

@@ -18,7 +18,10 @@
   <view class="message-list">
     <block wx:for="{{messages}}" wx:key="index">
       <view class="{{item.sender === 'user' ? 'message user' : 'message ai'}}">
-        {{item.text}}
+        <!-- 如果是AI消息，使用rich-text渲染 -->
+        <rich-text wx:if="{{item.sender === 'ai'}}" nodes="{{item.text}}"></rich-text>
+        <!-- 用户消息保持原样 -->
+        <text wx:else>{{item.text}}</text>
       </view>
     </block>
   </view>
