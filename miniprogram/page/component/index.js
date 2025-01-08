@@ -33,17 +33,17 @@ Page({
         id: 'view',
         name: '我的课表',
         open: false,
-        pages: ['view', 'scroll-view', 'swiper', 'movable-view', 'cover-view']
+        pages: ['scroll-view']
       }, {
         id: 'content',
         name: '教务通知',
         open: false,
-        pages: ['text', 'icon', 'progress', 'rich-text']
+        pages: ['text']
       }, {
         id: 'form',
         name: '选课系统',
         open: false,
-        pages: ['button', 'checkbox', 'form', 'input', 'label', 'picker', 'picker-view', 'radio', 'slider', 'switch', 'textarea', 'editor']
+        pages: ['button']
       }, {
         id: 'nav',
         name: '学校校历',
@@ -53,7 +53,7 @@ Page({
         id: 'media',
         name: '成绩查询',
         open: false,
-        pages: ['image', 'video', 'camera', 'live-pusher', 'live-player']
+        pages: ['image']
       },
     ],
     theme: 'light'
